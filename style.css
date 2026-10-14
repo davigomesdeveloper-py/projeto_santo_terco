@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    background-image: url(imagens/background-montanha.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header ul{
+  display: flex;
+  padding: 10px 33vw;
+  list-style: none;
+}
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(20, 16, 14, 0);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.misterios {
+  display: flex;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 40px);
+  margin: 0;
+  padding: 0 12px;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.misterio-botao {
+  padding: 16px 4px 12px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background-color: none;
+  color: #000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: clamp(0.9rem, 2.4vw, 1.1rem);
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.misterio-botao:hover {
+  opacity: 1;
+}
+
+.misterio-botao.ativo {
+  opacity: 1;
+  font-weight: 700;
+  border-bottom-color: #730000;
+}
+
+.misterio-botao:focus-visible {
+  outline: 3px solid #4da3ff;
+  outline-offset: -3px;
+}
+
+#explicacao {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#explicacao p {
+  padding-top: 5px;
+}
+
+.pagina {
+  width: clamp(300px, 60vw, 900px);
+  margin: 0 2vw;
+  padding: 25px;
+}
+
+/* ===== A tag <meu-carrossel> ===== */
+meu-carrossel {
+  display: block;
+  width: 40vw;
+  margin-top: 70px;
+}
+ 
+/* ===== Cartão: moldura que mostra um slide por vez ===== */
+.carrossel-cartao {
+  overflow: hidden;
+  background: #730000;
+  border: 2px solid #8c2f2f;
+  border-radius: 20px;
+}
+ 
+/* Faixa que contém todos os slides lado a lado */
+.carrossel-faixa {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+ 
+/* ===== Cada slide <carrossel-item> ===== */
+carrossel-item {
+  position: relative;
+  flex: 0 0 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+ 
+carrossel-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+/* Faixa escura com o texto, logo abaixo da imagem */
+carrossel-item .legenda {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 20px;
+  background: rgb(20, 16, 14, 0.45);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.5rem, 0.9vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-shadow: 0 1px 2px #000;
+}
+ 
+/* ===== Barra de controles (abaixo do cartão) ===== */
+.carrossel-controles {
+  width: 325px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  margin: 10px auto;
+  border: 1px solid #730000;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+ 
+/* Botões anterior e próximo */
+.carrossel-botao {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #730000;
+  border-radius: 50%;
+  background: #2a2420;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+ 
+.carrossel-botao:hover {
+  background-image: linear-gradient( #730000, #190B0B);
+}
+
+.carrossel-numero {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 2px solid #730000;
+  border-radius: 50%; 
+  font-size: 1.25rem;
+}
+
+.carrossel-titulo {
+  flex: 1;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #000000;
+}
+
+.carrossel-botao:focus-visible,
+meu-carrossel:focus-visible{
+  outline: 3px solid #4da3ff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrossel-faixa {transition: none;}
+}

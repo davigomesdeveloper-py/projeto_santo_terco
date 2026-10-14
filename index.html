@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terço Misterios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav aria-label="Misterios do terço">
+            <ul class="misterios">
+                <li>
+                    <button class ="misterio-botao" data-misterio="gozosos">Gozosos</button>
+                </li>
+                <li>
+                    <button class ="misterio-botao" data-misterio="luminosos">Luminosos</button>
+                </li>
+                <li>
+                    <button class ="misterio-botao" data-misterio="doloroso" aria-current="true">Doloroso</button>
+                </li>
+                <li>
+                    <button class ="misterio-botao" data-misterio="gloriosos" >Gloriosos</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pagina">
+        <section id="explicacao">
+            <h1>Mistérios gozosos</h1>
+        
+            <p >
+                Os mistérios gozosos são o primeiro conjunto de cinco eventos bíblicos da vida de Jesus e Maria, meditados no Rosário católico, focados na alegria da Encarnação e infância de Cristo. Eles são rezados tradicionalmente às segundas-feiras e sábados, convidando à contemplação da humildade e esperança divina.
+            </p>
+        </section>
+
+        <meu-carrossel>
+            <carrossel-item
+                imagem = "imagens/jesus_agonia_300.png" 
+                alt = "Jesus no horto das oliveira"
+                texto = 'Retirou-se Jesus com eles para um lugar chamado Getsêmani e disse-lhes: "Assentai-vos aqui, enquanto eu vou ali orar". E, tomando consigo Pedro e os dois filhos de Zebedeu, começou a entristecer-se e a angustiar-se. Disse-lhes, então: "Minha alma está triste até a morte. Ficai aqui e vigiai comigo". Adiantou-se um pouco e, prostrando-se com a face por terra, assim rezou: "Meu Pai, se é possível, afasta de mim este cálice! Todavia não se faça o que eu quero, mas sim o que tu queres" (Mt 26, 36-39).'
+                titulo =  "Mistério Doloroso: Agonia de Jesus no Horto"
+            ></carrossel-item>
+
+            <carrossel-item
+                imagem = "imagens/flagelacao_300.png" 
+                alt = "Jesus sendo flagelado"
+                titulo = "Mistério Doloroso: Flagelação de Jesus"
+                texto = "Então lhes soltou Barrabás; mas a Jesus mandou açoitar, e o entregou para ser crucificado  (Mt 27,26)."
+            ></carrossel-item>
+
+            <carrossel-item 
+                imagem ="imagens/coroacao_300.png" 
+                alt="Jesus sendo coroado com uma coroa de espinhos"
+                titulo = "Mistério Doloroso: Coroação de Espinhos"
+                texto = 'Os soldados do governador conduziram Jesus para o pretório e rodearam-no com todo o pelotão. Arrancaram-lhe as vestes e colocaram-lhe um manto escarlate. Depois, trançaram uma coroa de espinhos, meteram-lha na cabeça e puseram-lhe na mão uma vara. Dobrando os joelhos diante dele, diziam com escárnio: "Salve, rei dos judeus!" (Mt 27, 27-29).'
+            ></carrossel-item>
+
+            <carrossel-item  
+                imagem ="imagens/via_sacra_300.png" 
+                alt="Jesus carregando a cruz."
+                titulo = "Mistério Doloroso: Jesus carregando a cruz no caminho do Calvário"
+                texto = 'Passava por ali certo homem de Cirene, chamado Simão, que vinha do campo, pai de Alexandre e de Rufo, e obrigaram-no a que lhe levasse a cruz. Conduziram Jesus ao lugar chamado Gólgota, que quer dizer lugar do crânio (Mc 15, 21-22).'
+            ></carrossel-item>
+
+            <carrossel-item 
+                imagem = "imagens/crucificacao_300.png" 
+                alt = "Jesus sendo crucificado"
+                titulo = "Mistério Doloroso: Crucifixão e morte de Jesus"
+                texto = 'Chegados que foram ao lugar chamado Calvário, ali o crucificaram, como também os ladrões, um à direita e outro à esquerda. E Jesus dizia: "Pai, perdoa-lhes; porque não sabem o que fazem"... Era quase à hora sexta e em toda a terra houve trevas até a hora nona. Escureceu-se o sol e o véu do templo rasgou-se pelo meio. Jesus deu então um grande brado e disse: "Pai, nas tuas mãos entrego o meu espírito". E, dizendo isso, expirou» (Lc  23, 33-46).'
+            ></carrossel-item>
+        </meu-carrossel>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
